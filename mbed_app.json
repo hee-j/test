@@ -1,0 +1,13 @@
+{ 
+    "macros": ["MYMOD_MACRO1", "MYMOD_MACRO2=2"],
+    "target_overrides": { 
+        "*": {
+            "target.printf_lib": "std"
+        },
+        "NUCLEO_F401RE": {
+            "target.components_add": ["SD"],
+            "target.bootloader_img": "kitsat-bootloader.bin",
+            "platform.stdio-baud-rate": 115200
+        }
+    }
+}
